@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(0, 0%, 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.mugiwara { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px; 
+}
+.bone {
+    background-color: hsl(0, 0%, 100%);
+    width: 400px;
+    height: 35px;
+    position: absolute;
+}
+.bone::after,
+.bone::before {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 40px;
+    background-color: hsl(0, 0%, 100%);;
+    border-radius: 100%;
+    transform: translate(-15px, -20px);
+    box-shadow: -3px 35px 0 hsl(0, 0%, 100%);
+}
+.bone::after {
+    right: 0;
+    transform: translate(15px, -20px);
+    box-shadow: 3px 30px 0 hsl(0, 0%, 100%);
+}
+.bone:nth-child(1) {
+    transform: rotate(50deg) translateY(25px);
+    animation: in-bone-1 0.2s linear both;
+}
+.bone:nth-child(2) {
+    transform: rotate(-50deg) translateY(-25px);
+    animation: in-bone-2 0.4s linear both;
+}
+@keyframes in-bone-1 {
+    from {
+        transform:translateY(-500px);
+    }
+    to {
+        transform: rotate(35deg) ;
+    }
+}
+@keyframes in-bone-2 {
+    from {
+        transform:translateY(-500px);
+    }
+    to {
+        transform: rotate(-35deg) ;
+    }
+}
+.skull {
+    position: absolute;
+    width: 175px;
+    height: 100px;
+    background-color: hsl(0, 0%, 100%);
+    border: 0.11em solid hsl(0, 0%, 0%);  
+    border-radius: 0 0 100px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-30px);
+    animation: in-skull 0.6s linear both;
+    z-index: 1;
+}
+.skull::before {
+    position: absolute;
+    content: '';
+    width: 45px;
+    height: 45px;
+    border: 0.25em solid hsl(0, 0%, 0%); 
+    background-color: hsl(0, 0%, 0%);
+    border-radius: 100%;
+    transform: translate(-45px, -20px);
+    box-shadow: 90px 0 0 hsl(0, 0%, 0%);
+}
+.skull::after {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 0.25em solid hsl(0, 0%, 0%); 
+    background-color: hsl(0, 0%, 0%);
+    border-radius: 100%;
+    transform: translateY(20px); 
+}
+@keyframes in-skull {
+    from {
+        transform: translateY(-500px); 
+    }
+    to {
+        transform: translateY(-30px); 
+    }
+}
+.hat {
+    position: absolute;
+    width: 175px;
+    height: 80px; 
+    background-color: hsl(44, 73%, 43%); 
+    border: 0.111em solid hsl(0, 0%, 0%); 
+    border-radius: 100px 100px 0 0;
+    transform: translateY(-120px);
+    z-index: 0;
+    animation: in-hat 0.7s linear both;
+}
+.hat::before {
+    position: absolute;
+    content: '';
+    width: 170px;
+    height: 15px;
+    background-color: hsl(360, 97%, 28%);
+    border: 0.111em solid hsl(0, 0%, 0%); 
+    border-radius: 5px 5px 0 0;
+    z-index: -1;
+    transform: translateY(60px);
+}
+.hat::after {
+    position: absolute;
+    content: '';
+    width: 250px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: hsl(44, 73%, 43%); 
+    border: 0.111em solid hsl(0, 0%, 0%); 
+    z-index: 1;
+    transform: translate(-40px, 70px);
+}
+@keyframes in-hat {
+    from {
+        transform: translateY(-500px);
+    }
+    to {
+        transform: translateY(-120px);
+    }
+}
+.jaw {   
+    width: 85px;
+    height: 100px;
+    background-color: hsl(0, 0%, 100%); 
+    border: 0.111em solid hsl(0, 0%, 0%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    transform: translateY(45px);
+    z-index: 0;
+    animation: in-jaw 0.6s linear both;
+    contain: content
+}
+.jaw>.curve{ 
+    width: 95px;
+    height: 30px;
+    border: 0.11em solid hsl(0, 0%, 0%);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 100%;
+    transform: translate(-7px, 10px);
+}
+.line {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    border: 0.11em solid hsl(0, 0%, 0%);
+    border-top: none;
+    border-bottom: none;
+    border-left: none; 
+}
+.left {
+    transform: translate(-10px, -45px) rotate(10deg);
+}
+.center {
+    transform: translate(12px, -41px);
+}
+.right {
+    transform: translate(32px, -40px) rotate(-10deg);
+}
+@keyframes in-jaw {
+    from {
+        transform: translateY(-500px);
+    }
+    to {
+        transform: translateY(45px);
+    }
+}

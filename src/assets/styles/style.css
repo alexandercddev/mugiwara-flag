@@ -10,11 +10,11 @@ body {
     align-items: center;
     min-height: 100vh;
 }
-.mugiwara { 
+.mugiwara {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 350px; 
+    height: 350px;
 }
 .bone {
     background-color: hsl(0, 0%, 100%);
@@ -22,28 +22,27 @@ body {
     height: 35px;
     position: absolute;
 }
-.bone::after,
-.bone::before {
+.bone::before,
+.bone::after {
     position: absolute;
     content: '';
     width: 40px;
     height: 40px;
-    background-color: hsl(0, 0%, 100%);;
+    background-color: hsl(0, 0%, 100%);
     border-radius: 100%;
     transform: translate(-15px, -20px);
     box-shadow: -3px 35px 0 hsl(0, 0%, 100%);
 }
 .bone::after {
     right: 0;
-    transform: translate(15px, -20px);
-    box-shadow: 3px 30px 0 hsl(0, 0%, 100%);
+    transform: translate(15px, -20px);  
 }
 .bone:nth-child(1) {
-    transform: rotate(50deg) translateY(25px);
+    transform: rotate(35deg) translateY(25px);
     animation: in-bone-1 0.2s linear both;
 }
 .bone:nth-child(2) {
-    transform: rotate(-50deg) translateY(-25px);
+    transform: rotate(-35deg) translateY(-25px);
     animation: in-bone-2 0.4s linear both;
 }
 @keyframes in-bone-1 {
@@ -67,21 +66,21 @@ body {
     width: 175px;
     height: 100px;
     background-color: hsl(0, 0%, 100%);
-    border: 0.11em solid hsl(0, 0%, 0%);  
+    border: 0.11em solid hsl(0, 0%, 0%);
     border-radius: 0 0 100px 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     transform: translateY(-30px);
-    animation: in-skull 0.6s linear both;
     z-index: 1;
+    animation: in-skull 0.6s linear both;
 }
 .skull::before {
     position: absolute;
     content: '';
     width: 45px;
     height: 45px;
-    border: 0.25em solid hsl(0, 0%, 0%); 
+    border: 0.25em solid hsl(0, 0%, 0%);
     background-color: hsl(0, 0%, 0%);
     border-radius: 100%;
     transform: translate(-45px, -20px);
@@ -92,25 +91,25 @@ body {
     content: '';
     width: 20px;
     height: 20px;
-    border: 0.25em solid hsl(0, 0%, 0%); 
+    border: 0.25em solid hsl(0, 0%, 0%);
     background-color: hsl(0, 0%, 0%);
     border-radius: 100%;
     transform: translateY(20px); 
 }
 @keyframes in-skull {
     from {
-        transform: translateY(-500px); 
+        transform: translateY(-500px);
     }
     to {
-        transform: translateY(-30px); 
+        transform: translateY(-30px);
     }
 }
 .hat {
     position: absolute;
     width: 175px;
-    height: 80px; 
-    background-color: hsl(44, 73%, 43%); 
-    border: 0.111em solid hsl(0, 0%, 0%); 
+    height: 80px;
+    background-color: hsl(44, 73%, 43%);
+    border: 0.11em solid hsl(0, 0%, 0%);
     border-radius: 100px 100px 0 0;
     transform: translateY(-120px);
     z-index: 0;
@@ -122,21 +121,21 @@ body {
     width: 170px;
     height: 15px;
     background-color: hsl(360, 97%, 28%);
-    border: 0.111em solid hsl(0, 0%, 0%); 
+    border: 0.11em solid hsl(0, 0%, 0%);
     border-radius: 5px 5px 0 0;
-    z-index: -1;
     transform: translateY(60px);
+    z-index: -1;
 }
 .hat::after {
     position: absolute;
     content: '';
     width: 250px;
-    height: 15px;
+    height: 25px;
     border-radius: 50%;
-    background-color: hsl(44, 73%, 43%); 
-    border: 0.111em solid hsl(0, 0%, 0%); 
-    z-index: 1;
+    background-color: hsl(44, 73%, 43%);
+    border: 0.11em solid hsl(0, 0%, 0%);
     transform: translate(-40px, 70px);
+    z-index: 1;
 }
 @keyframes in-hat {
     from {
@@ -146,18 +145,18 @@ body {
         transform: translateY(-120px);
     }
 }
-.jaw {   
+.jaw {
     width: 85px;
     height: 100px;
-    background-color: hsl(0, 0%, 100%); 
-    border: 0.111em solid hsl(0, 0%, 0%);
-    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    background-color: hsl(0, 0%, 100%);
+    border: 0.11em solid hsl(0, 0%, 0%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 60% 60%;
     transform: translateY(45px);
+    contain: content;
     z-index: 0;
     animation: in-jaw 0.6s linear both;
-    contain: content
 }
-.jaw>.curve{ 
+.jaw>.curve {
     width: 95px;
     height: 30px;
     border: 0.11em solid hsl(0, 0%, 0%);
@@ -174,7 +173,7 @@ body {
     border: 0.11em solid hsl(0, 0%, 0%);
     border-top: none;
     border-bottom: none;
-    border-left: none; 
+    border-left: none;
 }
 .left {
     transform: translate(-10px, -45px) rotate(10deg);
